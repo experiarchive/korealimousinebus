@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: white;
+  /* header 배경색을 흰색으로 변경 */
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  /* 텍스트 정렬을 왼쪽으로 변경 */
+}
+
+.logo {
+  margin-left: 25px;
+  /* 로고를 왼쪽으로 조금만 띄움 */
+}
+
+.logo img {
+  height: 75px;
+  /* 로고 이미지 크기를 100px로 조정 */
+}
+
+.choose-language {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  /* 원하는 위치로 조정 */
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  /* 메뉴 간격을 더욱 벌림 */
+  margin-top: 5px;
+}
+
+.menu-item {
+  text-align: center;
+  flex: 1 1 100px;
+  /* 수정된 부분 */
+  margin: 0 50px;
+  /* 수정된 부분 */
+  padding: 10px;
+  /* 각 메뉴의 패딩을 조정하여 높이를 줄임 */
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.menu-item .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+}
+
+.menu-item:hover .overlay {
+  opacity: 1;
+}
+
+.menu-box {
+  border: 1px solid white;
+  border-radius: 8px;
+  text-align: center;
+  height: 225px;
+  /* 메뉴 상자의 높이를 250px로 조정 */
+  padding: 30px;
+  /* 내부 패딩을 추가하여 내용을 중앙 정렬 */
+}
+
+.menu-box img {
+  width: 200px;
+  /* 이미지 크기를 200px로 조정 */
+  height: 140px;
+  /* 이미지 크기를 200px로 조정 */
+}
+
+.menu-box p {
+  margin: 10px 0 0;
+  font-size: 30px;
+  /* 텍스트 크기를 24px로 조정 */
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+    /* 모바일 화면에서는 배경 이미지를 표시하지 않음 */
+  }
+
+  header {
+    padding: 10px;
+    /* 헤더 패딩을 줄임 */
+  }
+
+  .logo {
+    margin-left: 10px;
+    /* 로고 여백을 줄임 */
+  }
+
+  .choose-language {
+    font-size: 30px;
+    /* 언어 선택 폰트 크기를 줄임 */
+    padding-top: 20px;
+    /* 상단 여백을 조정 */
+  }
+
+  .menu-container {
+    flex-direction: column;
+    /* 모바일 화면에서 메뉴를 세로로 배치 */
+  }
+
+  .menu-item {
+    flex: 1 1 auto;
+    /* 메뉴 항목 크기를 조정 */
+    margin: 2px 0;
+    /* 메뉴 간 여백을 조정 */
+  }
+
+  .menu-box {
+    height: 130px;
+    /* 메뉴 상자의 높이를 조정 */
+    padding: 10px;
+    /* 내부 패딩을 조정하여 내용을 중앙 정렬 */
+  }
+
+  .menu-box img {
+    width: 100px;
+    /* 이미지 크기를 조정 */
+    height: 75px;
+    /* 이미지 크기를 조정 */
+  }
+
+  .menu-box p {
+    font-size: 20px;
+    /* 텍스트 크기를 조정 */
+  }
+}
