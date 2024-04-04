@@ -128,11 +128,6 @@ header {
     /* 상단 여백을 조정 */
   }
 
-  .menu-container {
-    flex-direction: column;
-    /* 모바일 화면에서 메뉴를 세로로 배치 */
-  }
-
   .menu-item {
     flex: 1 1 auto;
     /* 메뉴 항목 크기를 조정 */
@@ -155,7 +150,7 @@ header {
   }
 
   .menu-box p {
-    font-size: 20px;
+    font-size: 15px;
     /* 텍스트 크기를 조정 */
   }
 }
